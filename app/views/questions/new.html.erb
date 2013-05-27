@@ -1,24 +1,12 @@
 <div id="center">
-
-
   <p id="intro1">Can't get enough of<br/> i Usher ?<br/>
     Want to know more?</p>
   <p id="subintro1">We'd love to hear from you !</p>
 
 
   <div id="question-container">
-<%= form_for(@question) do |f| %>
-    <% if @question.errors.any? %>
-        <div id="error_explanation">
-          <h3><%= pluralize(@question.errors.count, "error") %> prohibited this post from being saved:</h3>
+<%= form_for @question do |f| %>
 
-          <ul>
-            <% @question.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
 
     <div id="question">
     <%= f.label :name %><br />
@@ -35,7 +23,7 @@
 
     <br/>
     <div id="question-button">
-      <%= f.submit "Submit", class: 'green button' %>
+      <%= f.submit "submit", class: 'green button' %>
     </div>
 <% end %>
 </div>

@@ -2,7 +2,7 @@ class Admin < ActiveRecord::Base
   attr_accessible :company, :branch, :email, :latitude, :longitude, :password, :pic
   #--------------------- callbacks-------------------#
   before_save { |admin| admin.email = email.downcase }
-  before_save :create_remember_token
+  before_create :create_remember_token
 
   # ----------------- relationships  ----------------#
   has_secure_password
@@ -33,7 +33,7 @@ class Admin < ActiveRecord::Base
 
   def self.search(search_query)
     if search_query
-      where (['branch LIKE ? OR company LIKE ?', "%#{search_query}%",
+      where (['branch ILIKE ? OR company ILIKE ?', "%#{search_query}%",
               "%#{search_query}%"])
     else
       scoped

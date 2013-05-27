@@ -1,9 +1,11 @@
-<h1>Viewing Contact</h1>
-<div id="contact-border">
-<div class="page-header">
 
+<div class="page-header">
+  <h4 class="buddy">Edit Contact</h4>
 </div>
 
+  <br/>
+  <br/>
+<div id="contact-border">
     <% if @user_friendship.requested? %>
         <%= form_for @user_friendship, url: accept_user_friendship_path(@user_friendship), method: :put do |form| %>
             <%= submit_tag "Accept Friendship", class: 'btn btn-primary' %>

@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
 
   def self.search(search_query)
     if search_query
-      where (['first_name LIKE ? OR last_name LIKE ? OR profile_name LIKE ?', "%#{search_query}%",
+      where (['first_name ILIKE ? OR last_name ILIKE ? OR profile_name ILIKE ?', "%#{search_query}%",
                                  "%#{search_query}%", "%#{search_query}%"])
     else
       scoped

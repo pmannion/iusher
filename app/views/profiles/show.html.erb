@@ -7,6 +7,8 @@
 <!--button to connect to user friendships,if at other users, if at own profile no button-->
    <%= render 'profiles/connect' %>
 
+
+
    <!-- statistics belonging to graphics and links for sub menu bar -->
    <div id="reputation">
      ( <%= @user.reputation_for(:votes).to_i %> )
@@ -36,10 +38,8 @@
 <!-- all users accepted friends, conditional to show the friends list only on the logged in users profile page -->
    <%= render 'profiles/buddies' %>
 
-
-
-<% else %>
 <% end %>
+
 </div>
 
 <% if !current_user  %>

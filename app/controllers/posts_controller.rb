@@ -129,7 +129,7 @@ end
   def vote
     value = params[:type] == "up" ? 1 : -1
     @post = Post.find(params[:id])
-    @post.add_or_update_evaluation(:votes, value, current_user)
+    @post.add_or_update_evaluation(:votes, value, current_user )
     redirect_to :back
     flash[:success] = "Thanks for voting"
 
