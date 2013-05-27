@@ -173,7 +173,7 @@ DEPENDENCIES
   js-routes
   masonry-rails
   paperclip
-  pg
+  pg (= 0.12.2)
   rails (= 3.2.12)
   rspec-rails (= 2.11.0)
   sass-rails (= 3.2.5)
