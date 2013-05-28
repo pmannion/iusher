@@ -1,7 +1,7 @@
 //Ajax request to add a buddy from the profile page,
 // removes stage of confirming if you want to a buddy
 
-
+$(document).ready(function(){
 $(document).on('page:load',function(){
   $('#add-buddy').click(function(event){
     event.preventDefault();
@@ -14,6 +14,7 @@ $(document).on('page:load',function(){
         addBuddyBtn.hide();
         $('#connect').html("<a href='#' class= 'buddyconnected'>Requested</a>");
     }
+        });
         });
     });
 });

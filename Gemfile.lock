@@ -59,7 +59,6 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
-    ffi (1.4.0)
     ffi (1.4.0-x86-mingw32)
     hike (1.2.1)
     i18n (0.6.4)
@@ -173,7 +172,7 @@ DEPENDENCIES
   js-routes
   masonry-rails
   paperclip
-  pg (= 0.12.2)
+  pg
   rails (= 3.2.12)
   rspec-rails (= 2.11.0)
   sass-rails (= 3.2.5)
